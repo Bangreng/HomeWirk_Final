@@ -77,6 +77,10 @@
                 left: -1px;
                 background-color: _var.$light-aqua;
                 border-radius: 5px;
+
+                @include _mix.desktop{
+                    top: 110px;
+                }
             }
         }
 
