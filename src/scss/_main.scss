@@ -1,0 +1,225 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.main{
+
+    @include _mix.desktop{
+    max-width: 1440px;
+    margin: 0 auto;
+    }
+
+    &__section{
+        margin-bottom: 24px;
+
+        @include _mix.pad{
+            display: flex;
+            gap: 48px;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        @include _mix.desktop{
+            margin-bottom: 51px;
+        }
+
+
+        &-about{
+            line-height: 18px;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            margin-bottom: 16px;
+            max-height: 90px;
+            overflow: hidden;
+
+            @include _mix.pad{
+                max-height: 160px;
+                margin-bottom: 10px;
+
+                p:first-child{
+                    padding-bottom: 20px;
+                }
+            }
+
+            @include _mix.desktop{
+                margin-bottom: 14px;
+
+                p:first-child{
+                    padding-top: 8px;
+                }
+            }
+        }
+
+        &-image{
+            margin-left: -16px;
+            margin-right: -16px;
+
+            img{
+                width: 100%;
+            }
+
+            @include _mix.pad{
+                margin: 0;
+
+                img{
+                    position: relative;
+                    min-width: 360px;
+                    border-radius: 6px;
+                }
+            }
+
+            @include _mix.desktop{
+                img{
+                    min-width: 532px;
+                }
+            }
+        }
+        
+    }
+
+    &__header{
+        @include _mix.desktop{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 42px;
+        }
+
+        &-list{
+            @include _mix.desktop{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                gap: 32px;
+            }
+        }
+
+        &-title{
+            font-family: 'TT Lakes';
+            margin-top: 24px;
+            margin-bottom: 24px;
+            position: relative;
+            font-size: 28px;
+            line-height: 40px;
+
+            @include _mix.pad{
+                font-size: 28px;
+                letter-spacing: -0.6px;
+            }
+
+            @include _mix.desktop{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 4px;
+                height: 40px;
+                background-color: _var.$light-aqua;
+                border-radius: 10px;
+                left: -16.5px;
+
+                @include _mix.pad{
+                    left: -24.5px;
+                }
+
+                @include _mix.desktop{
+                    left: -32.5px;
+                }
+            }
+
+        }
+
+        &-btn{
+            @include _mix.desktop{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items:center;
+                border: none;
+                background: none;
+                letter-spacing: -0.2px;
+                line-height: 24px;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: 500; 
+                font-family: 'TT Lakes';
+
+                .text-btn{
+                    padding-right: 8px;
+                }
+            }
+        }
+
+        &-nav--hidden{
+            display: none;
+
+            @include _mix.desktop{
+                display: flex;
+            }
+        }
+    }
+
+    &__nav{
+        margin-bottom: 24px;
+
+        @include _mix.desktop{
+            margin-bottom: 0;
+        }
+
+        &-list{
+            display: flex;
+            overflow: auto;
+            scrollbar-width: none;
+
+            @include _mix.pad{
+                margin-bottom: 32px;
+                margin-top: 32px;
+            }
+
+            @include _mix.desktop{
+                margin: 8px 0;
+                flex-wrap: wrap;
+                overflow: visible;
+
+                li{
+                    width: auto;
+                }
+            }
+        }
+
+        &-item{
+            list-style-type: none;
+        }
+
+        &-link{
+            white-space: nowrap;
+            display: flex;
+            text-decoration: none;
+            color: _var.$color-text-link-active;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            padding: 6px 16px;
+            border: 2px solid transparent;
+            border-radius: 6px;
+
+            &--active{
+                background-color: _var.$white;
+                border-color: _var.$color-link-active;
+            }
+        }
+    }
+
+    &__content{
+        .btn-functional{
+            display: flex;
+            margin-bottom: 16px;
+
+            @include _mix.pad{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

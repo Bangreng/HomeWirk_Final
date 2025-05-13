@@ -1,0 +1,26 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.order-a-call{
+    right: 0;
+    transform: translateX(120%);
+    overflow: visible;
+
+    &--open{
+        transform: translateX(0);
+        box-shadow: _var.$shadow-menu;
+    }
+
+    .icon-button{
+        margin-bottom: 40px;
+    }
+
+    @include _mix.pad{
+        width: 440px;
+
+        .icon-button{
+            position: absolute;
+            transform: translateX(-80px);
+        }
+    }
+}

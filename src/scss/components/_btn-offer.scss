@@ -1,0 +1,21 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.btn-offer{
+    display: inline-block;
+    padding-right: 24px; 
+    position: relative;
+    font-family: 'TT Lakes';
+    border: none;
+    background: none;
+    text-align: left;
+
+    &__arrow{
+        position: absolute;
+        background-image: url(../../img/icon/offer-arrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 24px;
+        height: 24px;
+    }
+}

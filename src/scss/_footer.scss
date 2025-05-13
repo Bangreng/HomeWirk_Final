@@ -1,0 +1,57 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: _var.$color-grey;
+    gap: 16px;
+    margin-bottom: 19px;
+    border-top: 1px solid _var.$border;
+    padding-top: 16px;
+
+    @include _mix.pad{
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 32px;
+        margin-bottom: 25px;
+        gap: 0;
+
+        &__development-data{
+            text-align: left;
+            width: 218px;
+        }
+
+        &__not-public-offer{
+            width: 213px;
+            text-align: right;
+        }
+    }
+
+    @include _mix.desktop{
+        &__development-data{
+            width: 218px;
+        }
+
+        &__not-public-offer{
+            width: 330px;
+        }
+    }
+}
+
+
+.commercial-offer{
+    max-width: 421px;
+
+    &__text{
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        margin-bottom: 16px;
+    }
+}

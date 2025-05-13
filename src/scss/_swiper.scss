@@ -1,0 +1,59 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.swiper{
+    margin-right: -16px;
+    margin-left: -16px;
+
+    @include _mix.pad{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    &-slide{
+        width: auto;
+        box-sizing:border-box;
+
+        @include _mix.pad {
+            &:last-child {
+                .repaired-services__item::after {
+                    display: none;
+                }
+
+                .repaired-services__item {
+                    border-radius: 0 0 6px 6px;
+                }
+            }
+
+            &:nth-child(2) {
+                .repaired-services__item {
+                    border-radius: 6px 6px 0 0;
+                }
+            }
+        }
+    }
+
+    &-wrapper{
+        padding-left: 16px;
+
+        @include _mix.pad{
+            padding-left: 0;
+        }
+    }
+
+    &-pagination{
+        position: static;
+
+        &-bullet{
+            width: 12px;
+            height: 12px;
+            background: _var.$color-disabled;
+
+            &-active{
+                background: _var.$light-grey;
+            }
+        }
+    }
+
+
+}

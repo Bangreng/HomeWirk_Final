@@ -1,0 +1,136 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.burger-nav{
+    left: 0;
+    transform: translateX(-100%);
+
+    @include _mix.desktop{
+        left: auto;
+        transform: translateX(0);
+        height: 100%;
+        z-index: 0;
+    }
+
+    &__wrapper{
+        padding: 0 24px;
+    }
+
+    &--open{
+        transform: translateX(0);
+        box-shadow: _var.$shadow-menu;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 18px;
+        padding-bottom: 46px;
+
+        @include _mix.desktop{
+            padding-top: 30px;
+            padding-bottom: 26px;
+        }
+    }
+
+    &__section{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & .icon-button--close{
+            @include _mix.desktop{
+                display: none;
+            }
+        }
+    }
+
+    &__list{
+        margin-bottom: 268px;
+
+        @include _mix.desktop{
+            margin-bottom: 241px;
+        }
+    }
+
+    &__item{
+        margin-bottom: 32px;
+
+        &:last-child{
+            margin: 0;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: _var.$color-text-link;
+
+        &--active{
+            color: _var.$color-text-link-active;
+
+            &::before{
+                position: absolute;
+                content: "";
+                width: 4px;
+                height: 32px;
+                top: 116px;
+                left: -1px;
+                background-color: _var.$light-aqua;
+                border-radius: 5px;
+            }
+        }
+
+        &:hover{
+            color: _var.$color-text-link-active;
+            transition: .3s;
+        }
+    }
+}
+
+.footer-burger{
+    &__email-company{
+         margin-bottom: 12px;
+    }
+
+    &__btn-icon{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__number-company{
+        font-family: 'TT Lakes';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        margin-bottom: 40px;
+    }
+}
+
+.language{
+    display: flex;
+    gap: 7px;
+}
+
+.select-language{
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: _var.$color-text-link;
+    opacity: 0.8;
+    transition: .3s;
+
+    &:hover{
+        color:_var.$color-text-link-active;
+    }
+
+    &:first-child{
+        color: _var.$color-text-link-active;
+    }
+}

@@ -1,0 +1,14 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.header{
+    background-color:_var.$white;
+    border-bottom: 1px solid _var.$light-aqua;
+    @include _mix.desktop{
+        display: none;
+    }
+}
+
+.logo-img{
+    display: block;
+}

@@ -1,0 +1,16 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.wrapper{
+    padding: 0 16px;
+    @include _mix.pad{
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    @include _mix.desktop{
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-left: 320px;
+    }
+}

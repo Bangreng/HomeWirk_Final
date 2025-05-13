@@ -1,0 +1,36 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__burger{
+            font-size: 0;
+        }
+
+        &-line{
+            width: 2px;
+            height: 32px;
+            background-color: _var.$color-neutral-light;
+            border-radius: 1px;
+            margin-right: 5px;
+
+            &--hidden{
+                display: none;
+
+                @include _mix.pad{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

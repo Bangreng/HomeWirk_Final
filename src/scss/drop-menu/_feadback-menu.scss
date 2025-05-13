@@ -1,0 +1,41 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+
+.feedback{
+    right: 0;
+    transform: translateX(120%);
+    overflow: visible;
+
+    @include _mix.pad{
+        width: 440px;
+
+        .icon-button{
+            position: absolute;
+            transform: translateX(-80px);
+        }
+    }
+
+    &--open{
+        transform: translateX(0);
+        box-shadow: _var.$shadow-menu;
+    }
+
+    .icon-button{
+        margin-bottom: 40px;
+    }
+
+    &-form{
+        &__textarea{
+            font-family: 'TT Lakes';
+            width: 100%;
+            height: 118px;
+            border: 1px solid _var.$color-neutral-light;
+            border-radius: 8px;
+            padding-top: 12px;
+            padding-left: 16px;
+            color: _var.$color-input;
+        }
+    }
+
+}

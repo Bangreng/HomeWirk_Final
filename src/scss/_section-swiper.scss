@@ -1,0 +1,51 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.section-swiper{
+    margin-bottom: 24px;
+
+    @include _mix.pad{
+        margin-bottom: 32px;
+    }
+
+    @include _mix.desktop{
+        margin-bottom: 50px;
+    }
+
+    &:last-of-type{
+        margin-bottom: 40px;
+
+        @include _mix.pad{
+            margin-bottom: 47px;
+        }
+
+        @include _mix.desktop{
+            margin-bottom: 50px;
+        }
+    }
+
+
+}
+
+.heading{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: _var.$color-text-link-active;
+    padding: 16px 16px;
+    background: _var.$heading-gradient;
+    margin: 0 -16px 16px;
+    border-top: 1px solid _var.$border;
+    font-weight: 400;
+
+    @include _mix.pad{
+        padding: 15px 24px;
+        margin: 0 -24px 24px;
+    }
+
+    @include _mix.desktop{
+        padding: 15px 32px;
+        margin: 0 -32px 32px;
+    }
+}

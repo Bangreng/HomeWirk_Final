@@ -1,0 +1,38 @@
+@use '/../src/scss/abstracts/__var';
+@use '/../src/scss/abstracts/__mix';
+
+.button-order{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 2px;
+    width: 119px;
+    height: 32px;
+    background-color: _var.$color-primary;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    bottom: 16px;
+    right: 16px;
+
+    &__arrow{
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../../img/icon/order-arrow.png);
+    }
+
+    &__text{
+        font-family: 'TT Lakes';
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        text-align: right;
+        text-transform: uppercase;
+        color: _var.$white;
+        padding-left: 8px;
+    }
+}
