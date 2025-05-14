@@ -11,16 +11,16 @@
     text-align: center;
     color: _var.$color-grey;
     gap: 16px;
-    margin-bottom: 19px;
+    margin: 0 -16px 19px;
     border-top: 1px solid _var.$border;
     padding-top: 16px;
 
     @include _mix.pad{
         flex-direction: row;
         justify-content: space-between;
-        padding-top: 32px;
-        margin-bottom: 25px;
         gap: 0;
+        padding: 15px 32px;
+        margin: 0 -32px 32px;
 
         &__development-data{
             text-align: left;
